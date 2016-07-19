@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>大学生创客网</title>
+<meta name="keywords" content="大学生创客网">
+<meta name="description" content="大学生创客网">
+<link href="http://localhost/chuangyi/statics/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost/chuangyi/statics/css/css.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost/chuangyi/statics/css/default_blue.css" rel="stylesheet" type="text/css" />
+<script type='text/javascript' src='http://localhost/chuangyi/statics/js/dropdown.js'></script>
+<script type="text/javascript" src="http://localhost/chuangyi/statics/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost/chuangyi/statics/js/jquery.sgallery.js"></script>
+<script type="text/javascript" src="http://localhost/chuangyi/statics/js/search_common.js"></script>
+</head>
+<body>
+<div class="main_100">
+    <div class="top">
+        <div class="top_01">
+        <div class="left">
+            <a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('#');" href="#">·设为首页</a>&nbsp;&nbsp;<a onclick="window.external.AddFavorite('#', '大学生创客网'); return false;">·加入收藏</a></div>
+        
+
+        
+        <div class="right" >
+        
+                                
+        
+        <a href="index.php?m=member&c=index">欢迎 
+        [            新手上路        ]  test</a>
+        <span> | </span>
+        <a href="http://localhost/chuangyi/index.php?m=member&c=index&a=logout">退出</a>
+        <span> | </span>
+        <a href="">首页</a>
+                </div>
+        </div>
+    </div>
+    <div class="top_01"><img src="http://localhost/chuangyi/statics/images/Design/logo.jpg"  class="left"/><img src="http://localhost/chuangyi/statics/images/Design/rexian.jpg"  class="right"/></div>
+<div class="nav">
+    <div id="nav">
+    <ul id="navMenu">
+        <li><a href="index.php" class="hover">网站首页</a></li>
+        <li><a href='index.php?m=content&c=index&a=lists&catid=7'>新闻资讯</a> </li>   
+        <li><a href='index.php?m=content&c=index&a=lists&catid=8'>创意展示</a></li>
+        <li><a href='index.php?m=content&c=index&a=lists&catid=9'>项目发布</a></li>        
+        <li><a rel="dropmenu1">竞赛专区</a></li>
+        <li><a href="index.php?m=content&c=index&a=lists&catid=11">创客空间</a></li>
+        <li><a href="index.php?m=content&c=index&a=lists&catid=12">创客论坛</a> </li>
+        <li><a href="index.php?m=content&c=index&a=lists&catid=13">理工创意圈</a></li>
+        <li><a href="#">关于我们</a></li>
+    </ul>
+</div>
+<ul id="dropmenu1" class="dropMenu">
+    <li><a href="index.php?m=content&c=index&a=lists&catid=14">竞赛动态</a></li>
+    <li><a href="index.php?m=content&c=index&a=lists&catid=15">资料下载</a></li>
+    <li><a href="index.php?m=content&c=index&a=lists&catid=16">导师帮帮团</a></li>
+</ul>
+</div>
+<script type="text/javascript">cssdropdown.startchrome("navMenu")</script><!-- 轮播样式 -->
+<style>
+.flexslider {
+    margin: 0px auto 20px;
+    position: relative;
+    width: 100%;
+    height: 482px;
+    overflow: hidden;
+    zoom: 1;
+}
+.flexslider .slides li {
+    width: 100%;
+    height: 100%;
+}
+.flex-direction-nav a {
+    width: 70px;
+    height: 70px;
+    line-height: 99em;
+    overflow: hidden;
+    margin: -35px 0 0;
+    display: block;
+    background: url(http://localhost/chuangyi/statics/images/Design/ad_ctr.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all .3s ease;
+    border-radius: 35px;
+}
+
+.flex-direction-nav .flex-next {
+    background-position: 0 -70px;
+    right: 0;
+}
+
+.flex-direction-nav .flex-prev {
+    left: 0;
+}
+
+.flexslider:hover .flex-next {
+    opacity: 0.8;
+    filter: alpha(opacity=25);
+}
+
+.flexslider:hover .flex-prev {
+    opacity: 0.8;
+    filter: alpha(opacity=25);
+}
+
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover {
+    opacity: 1;
+    filter: alpha(opacity=50);
+}
+
+.flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+.flex-control-nav li {
+    margin: 0 2px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+.flex-control-paging li a {
+    background: url(http://localhost/chuangyi/statics/images/Design/dot.png) no-repeat 0 -16px;
+    display: block;
+    height: 16px;
+    overflow: hidden;
+    text-indent: -99em;
+    width: 16px;
+    cursor: pointer;
+}
+
+.flex-control-paging li a.flex-active,
+.flex-control-paging li.active a {
+    background-position: 0 0;
+}
+
+.flexslider .slides a img {
+    width: 100%;
+    height: 400px;
+    display: block;
+}
+</style>
+<!-- 首页轮播 -->
+<div id="banner_tabs" class="flexslider">
+    <ul class="slides">
+                            <li><a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=6&id=6"><img src="http://localhost/chuangyi/uploadfile/2016/0716/20160716090618534.png"  alt="33333333333" border="0"></a></li>
+                    <li><a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=6&id=5"><img src="http://localhost/chuangyi/uploadfile/2016/0716/20160716090543101.jpg"  alt="222222" border="0"></a></li>
+                    <li><a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=6&id=4"><img src="http://localhost/chuangyi/uploadfile/2016/0716/20160716085413730.png"  alt="12121" border="0"></a></li>
+                    </ul>
+    <ul class="flex-direction-nav">
+        <li><a class="flex-prev" href="javascript:;">Previous</a></li>
+        <li><a class="flex-next" href="javascript:;">Next</a></li>
+    </ul>
+</div>
+<script src="http://www.hiid.com.cn/statics/js/jquery-1.10.2.min.js"></script>
+<script src="http://www.hiid.com.cn/statics/js/slider.js"></script>
+<script type="text/javascript">
+$(function() {
+    var bannerSlider = new Slider($('#banner_tabs'), {
+        time: 5000,
+        delay: 400,
+        event: 'hover',
+        auto: true,
+        mode: 'fade',
+        controller: $('#bannerCtrl'),
+        activeControllerCls: 'active'
+    });
+    $('#banner_tabs .flex-prev').click(function() {
+        bannerSlider.prev()
+    });
+    $('#banner_tabs .flex-next').click(function() {
+        bannerSlider.next()
+    });
+})
+</script>
+<!-- 轮播结束 -->
+<!--页面主体开始-->
+<!-- 入口 -->
+<img src="http://localhost/chuangyi/statics/images/Design/rukou.jpg" style="margin-top:-110px;">
+<!-- 入口结束 -->
+<div class="top_01">
+    <div class="bood">
+        <img src="http://localhost/chuangyi/statics/images/Design/biao_01.png" class="left left_10"/><b>竞赛动态</b><a href="#" class="right hong">更多》&nbsp;&nbsp;</a>
+    </div>
+        <div class="bodd">
+            <ul class="biao_02">
+                                                <li>·  <a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=14&id=8" >竞赛动态测试数据1</a>
+                    <span class="right">2016-07-17 23:30:57</span></li>
+                                            </ul>
+        </div>
+        <script>
+//滚动
+(function($){
+    $.fn.kxbdMarquee = function(options){
+        var opts = $.extend({},$.fn.kxbdMarquee.defaults, options);
+        return this.each(function(){
+            var $marquee = $(this);//滚动元素容器
+            var _scrollObj = $marquee.get(0);//滚动元素容器DOM
+            var scrollW = $marquee.width();//滚动元素容器的宽度
+            var scrollH = $marquee.height();//滚动元素容器的高度
+            var $element = $marquee.children(); //滚动元素
+            var $kids = $element.children();//滚动子元素
+            var scrollSize=0;//滚动元素尺寸
+            var _type = (opts.direction == 'left' || opts.direction == 'right') ? 1:0;//滚动类型，1左右，0上下
+
+            //防止滚动子元素比滚动元素宽而取不到实际滚动子元素宽度
+            $element.css(_type?'width':'height',10000);
+            //获取滚动元素的尺寸
+            if (opts.isEqual) {
+                scrollSize = $kids[_type?'outerWidth':'outerHeight']() * $kids.length;
+            }else{
+                $kids.each(function(){
+                    scrollSize += $(this)[_type?'outerWidth':'outerHeight']();
+                });
+            }
+            //滚动元素总尺寸小于容器尺寸，不滚动
+            if (scrollSize<(_type?scrollW:scrollH)) return; 
+            //克隆滚动子元素将其插入到滚动元素后，并设定滚动元素宽度
+            $element.append($kids.clone()).css(_type?'width':'height',scrollSize*2);
+            var numMoved = 0;
+            function scrollFunc(){
+                var _dir = (opts.direction == 'left' || opts.direction == 'right') ? 'scrollLeft':'scrollTop';
+                if (opts.loop > 0) {
+                    numMoved+=opts.scrollAmount;
+                    if(numMoved>scrollSize*opts.loop){
+                        _scrollObj[_dir] = 0;
+                        return clearInterval(moveId);
+                    } 
+                }
+                if(opts.direction == 'left' || opts.direction == 'up'){
+                    var newPos = _scrollObj[_dir] + opts.scrollAmount;
+                    if(newPos>=scrollSize){
+                        newPos -= scrollSize;
+                    }
+                    _scrollObj[_dir] = newPos;
+                }else{
+                    var newPos = _scrollObj[_dir] - opts.scrollAmount;
+                    if(newPos<=0){
+                        newPos += scrollSize;
+                    }
+                    _scrollObj[_dir] = newPos;
+                }
+            };
+            //滚动开始
+            var moveId = setInterval(scrollFunc, opts.scrollDelay);
+            //鼠标划过停止滚动
+            $marquee.hover(
+                function(){
+                    clearInterval(moveId);
+                },
+                function(){
+                    clearInterval(moveId);
+                    moveId = setInterval(scrollFunc, opts.scrollDelay);
+                }
+            );
+            //控制加速运动
+            if(opts.controlBtn){
+                $.each(opts.controlBtn, function(i,val){
+                    $(val).bind(opts.eventA,function(){
+                        opts.direction = i;
+                        opts.oldAmount = opts.scrollAmount;
+                        opts.scrollAmount = opts.newAmount;
+                    }).bind(opts.eventB,function(){
+                        opts.scrollAmount = opts.oldAmount;
+                    });
+                });
+            }
+        });
+    };
+    $.fn.kxbdMarquee.defaults = {
+        isEqual:true,//所有滚动的元素长宽是否相等,true,false
+        loop: 0,//循环滚动次数，0时无限
+        direction: 'left',//滚动方向，'left','right','up','down'
+        scrollAmount:1,//步长
+        scrollDelay:10,//时长
+        newAmount:3,//加速滚动的步长
+        eventA:'mousedown',//鼠标事件，加速
+        eventB:'mouseup'//鼠标事件，原速
+    };
+    $.fn.kxbdMarquee.setDefaults = function(settings) {
+        $.extend( $.fn.kxbdMarquee.defaults, settings );
+    };
+})(jQuery);
+</script>
+    <div class="top_10">
+    <div class="bood">
+        <img src="http://localhost/chuangyi/statics/images/Design/biao_01.png" class="left left_10"/><b>精品创意展</b><a href="#" class="right hong">更多》&nbsp;&nbsp;</a></div>
+        <div class="bodd juli_nei_top10">
+            <script type="text/javascript">
+$(document).ready(function(){
+    $('.marqueed').kxbdMarquee({
+            direction:'left',
+            eventA:'mouseenter',
+            eventB:'mouseleave'
+    });
+});
+</script>
+    <div class="marqueed"> 
+    <ul>
+                        <li>
+        <div class="pji_01">
+                <a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=8&id=14" ><img src="http://localhost/chuangyi/uploadfile/2016/0716/thumb_240_180_20160716073358825.jpg" width="240" height="180" alt="创意展示测试数据5" border="0"/></a>
+                <div class="txt"> <a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=8&id=14" >创意展示测试数据5</a></div>
+                </div></li>
+                <li>
+        <div class="pji_01">
+                <a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=8&id=12" ><img src="http://localhost/chuangyi/uploadfile/2016/0716/thumb_240_180_20160716073358825.jpg" width="240" height="180" alt="创意展示测试数据4" border="0"/></a>
+                <div class="txt"> <a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=8&id=12" >创意展示测试数据4</a></div>
+                </div></li>
+                <li>
+        <div class="pji_01">
+                <a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=8&id=11" ><img src="http://localhost/chuangyi/uploadfile/2016/0716/thumb_240_180_20160716073358825.jpg" width="240" height="180" alt="创意展示测试数据3" border="0"/></a>
+                <div class="txt"> <a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=8&id=11" >创意展示测试数据3</a></div>
+                </div></li>
+                <li>
+        <div class="pji_01">
+                <a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=8&id=10" ><img src="http://localhost/chuangyi/uploadfile/2016/0716/thumb_240_180_20160716073358825.jpg" width="240" height="180" alt="创意展示测试数据2" border="0"/></a>
+                <div class="txt"> <a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=8&id=10" >创意展示测试数据2</a></div>
+                </div></li>
+                <li>
+        <div class="pji_01">
+                <a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=8&id=7" ><img src="http://localhost/chuangyi/uploadfile/2016/0716/thumb_240_180_20160716073358825.jpg" width="240" height="180" alt="精品创意展示测试数据1" border="0"/></a>
+                <div class="txt"> <a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=8&id=7" >精品创意展示测试数据1</a></div>
+                </div></li>
+                        </ul>
+</div> 
+    </div>
+        </div>
+    <div class="left top_10">
+    <div class="bood">
+        <img src="http://localhost/chuangyi/statics/images/Design/biao_01.png" class="left left_10" style=""/><b>最新资讯</b><a href="#" class="right hong">更多》&nbsp;&nbsp;</a>
+    </div>
+        <div class="bodd">
+            <ul class="biao_02" style="width:540px;">
+                                                <li>·  <a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=7&id=13" >新闻资讯测试数据1</a></li>
+                                            </ul>
+        </div>
+    </div>
+
+    <div class="right top_10">
+    <div class="bood">
+        <img src="http://localhost/chuangyi/statics/images/Design/biao_01.png" class="left left_10"/><b>资料下载</b><a href="#" class="right hong">更多》&nbsp;&nbsp;</a></div>
+        <div class="bodd">
+            <ul class="biao_02" style="width:540px;">
+                                                <li>·  <a href="http://localhost/chuangyi/index.php?m=content&c=index&a=show&catid=15&id=9" >资料下载测试数据1</a></li>
+                                            </ul>
+        </div>
+    </div>
+</div>
+    <div class="top_01">
+  	<div class="left top_10" style="width:100%">
+    <div class="bood"><img src="http://localhost/chuangyi/statics/images/Design/biao_01.png" class="left left_10"/><b>友情链接</b></div>
+    <div class="bodd juli_nei_top10" style="background:#fff">
+        <ul class="biao_05">
+       						        </ul>
+    </div>
+    </div>
+    </div>
+  	<div class="nav juli_nei_10 top_10">
+热线电话：0451-82392812<br />
+Copyright © 2016 大学生创客网
+	</div>
+</div>
+</body>
+</html>

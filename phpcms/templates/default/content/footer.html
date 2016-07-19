@@ -1,0 +1,21 @@
+    <div class="top_01">
+     <div class="left top_10" style="width:100%">
+      <!-- <div class="bood"><img src="{IMG_PATH}Design/biao_01.png" class="left left_10"/><b>友情链接</b></div> -->
+      <!-- <div class="bodd juli_nei_top10" style="background:#fff"> -->
+        <ul class="biao_05">
+         {pc:content action="lists" catid="40" num="25" order="id DESC" page="$page" moreinfo="1"}
+         {loop $data $r}
+         <li><a href="{$r[url]}" target="_blank" {title_style($r[style])}>{$r[title]}</a></li>
+         {/loop}
+         {/pc}
+       </ul>
+     <!-- </div> -->
+   </div>
+ </div>
+ <div class="nav juli_nei_10 top_10">
+  热线电话：0451-82392812<br />
+  Copyright © 2016 大学生创客网
+</div>
+</div>
+</body>
+</html>

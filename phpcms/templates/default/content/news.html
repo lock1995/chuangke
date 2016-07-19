@@ -1,0 +1,34 @@
+{template "content","header"}
+
+<ul class="biao_02">
+    {pc:content action="lists" catid="14" num="7" order="id DESC" page="$page" moreinfo="1"}
+    {loop $data $r}
+    <li>·  <a href="{$r[url]}" {title_style($r[style])}>{$r[title]}</a>
+        <span class="right">{date('Y-m-d H:i:s',$r[inputtime])}</span></li>
+    {/loop}
+    {/pc}
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{template "content","footer"}
