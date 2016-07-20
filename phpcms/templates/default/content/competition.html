@@ -1,0 +1,126 @@
+{template "content","header"}
+
+<div class="main" style="min-height:710px">
+  <div class="left top_10" style="width:100%;">
+    <div class="bood">
+      <!-- <b class="left left_10">当前位置</b> -->
+      <div class="crumbs" style="padding:0 0 3px 20px;background-position:5px -35px;">
+        <a href="{siteurl($siteid)}">首页</a>
+        <span> > </span>{catpos($catid)} 列表
+      </div>
+    </div>
+  </div>
+  <div class="left top_10" style="width: 320px;">
+      <div class="bood top_10"><img src="{IMG_PATH}Design/biao_01.png" class="left left_10"/><b>导师帮帮团排行榜</b></div>
+      <div class="bodd">
+        <ul class="biao_01 left_10" style="width:300px;">
+          {pc:content action="lists" catid="16" where="'catid' in (7,18)" num="7" order="id DESC" page="$page"}
+            {loop $data $r}
+              <li>· <a href="{$r[url]}" {title_style($r[style])}>{$r[title]}</a></li>
+            {/loop}
+          {/pc}
+        </ul>
+      </div>
+      <div class="bood top_10"><img src="{IMG_PATH}Design/biao_01.png" class="left left_10"/><b>排行榜2</b></div>
+      <div class="bodd">
+          <ul class="biao_01 left_10" style="width:300px;">
+            {pc:content action="lists" catid="7" where="'catid' in (7,18)" num="7" order="id DESC" page="$page"}
+              {loop $data $r}
+                <li>· <a href="{$r[url]}" {title_style($r[style])}>{$r[title]}</a></li>
+              {/loop}
+            {/pc}
+          </ul>
+      </div>
+      <div class="bood top_10"><img src="{IMG_PATH}Design/biao_01.png" class="left left_10"/><b>排行榜3</b></div>
+      <div class="bodd">
+          <ul class="biao_01 left_10" style="width:300px;">
+            {pc:content action="lists" catid="7" where="'catid' in (7,18)" num="7" order="id DESC" page="$page"}
+              {loop $data $r}
+                <li>· <a href="{$r[url]}" {title_style($r[style])}>{$r[title]}</a></li>
+              {/loop}
+            {/pc}
+          </ul>
+      </div>
+
+      <div class="bood top_10">
+        <img src="{IMG_PATH}Design/biao_01.png"
+        class="left left_10">
+        <b>
+          竞赛动态排行
+          <a href="http://www.hiid.com.cn/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=61"
+          class="hong right">
+            更多&gt;&gt;
+          </a>
+        </b>
+      </div>
+      <div class="bodd">
+        {pc:content action="lists" catid="$catid" num="10" order="id DESC" page="$page"}
+          <ul class="biao_18" style="width:320px;">
+            {loop $data $r}
+              <li>
+                  <div class="shu">NO<br/><b>1</b></div>
+                  <a href="{$r[url]}"><p>{$r[title]}</p></a>
+              </li>
+            {/loop}
+          </ul>
+        {/pc}
+      </div>
+  </div>
+  <div class="right top_10" style="width: 630px">
+    <div class="top_10">
+      <div class="border" style="padding:10px 30px;">
+        <h2 class="test3" style="width: 100%">竞赛动态</h2>
+        <div class="gradient_01"></div>
+        {pc:content action="lists" catid="$catid" num="15" order="id DESC" page="$page"}
+          {loop $data $r}
+            <div class="text_670" style="width:565px;height:auto;">
+              <div class="text_h2" style="float:none">
+                <h2><a href="{$r[url]}">{$r[title]}</a></h2>
+                <p>
+                  {$r[description]}
+                  <span class="as-blue"><a href="#">全文</a></span>
+                </p>
+                <div class="rq">发布时间：{date('Y-m-d H:i:s',$r[inputtime])}</div>
+              </div>
+            </div>
+          {/loop}
+        {/pc}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+              
+              
+
+{template "content","footer"}
+
+
+  <!-- <div class="top_10">
+    {pc:content action="lists" catid="60" num="1" order="id DESC" page="$page"  moreinfo="1"}
+      {loop $data $r}
+        <a href="index.php?m=content&c=index&a=lists&catid=146" {title_style($r[style])}>
+          <img src="{$r[thumb]}" width="320"/>
+        </a>
+      {/loop}
+    {/pc}
+  </div> -->
+
+
+
+<!-- <li>
+  <div class="shu">
+    NO
+    <br>
+    <b>
+      1
+    </b>
+  </div>
+  <a href="http://www.hiid.com.cn/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=62&amp;uid=7">
+    <img src="./设计大赛 - 室内设计_装饰设计_建筑设计_室内设计师-黑龙江省室内设计学会_files/90x90.jpg" height="133"
+    width="160" onerror="this.src=&#39;http://www.hiid.com.cn/statics/images/member/nophoto.gif&#39;">
+ -->

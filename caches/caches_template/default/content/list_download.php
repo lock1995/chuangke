@@ -4,7 +4,7 @@
 <div class="main" style="min-height: 710px">
 	<!--left_bar-->
 	<div class="col-left">
-        <div class="crumbs"><a href="#">首页</a><span> &gt; </span><?php echo catpos($catid);?></div>
+        <div class="crumbs"><a href="#">首页</a><span> &gt; </span><?php echo catpos($catid);?> 列表</div>
         <!--最新下载-->
 <!--         <div class="box mg_b10">
           <h5>最新下载</h5>
@@ -27,7 +27,7 @@
       <dl class="down_list sysnews">
           <dt><h5><a href="#" title="<?php echo $r['title'];?>"><?php echo $r['title'];?></a></h5></dt>
           <dd class="down_txt" style="text-align: left"><?php echo $r['description'];?></dd>
-          <dd class="down_attribute align_r"><span class="icon_1">软件大小：<?php echo $r['filesize'];?></span><span class="icon_3">星级：<?php echo $r['stars'];?></span><span class="icon_4">更新时间：<?php echo date('Y-m-d',$r[inputtime]);?></span></dd>
+          <dd class="down_attribute align_r"><!-- <span class="icon_1">软件大小：<?php echo $r['filesize'];?></span><span class="icon_3">星级：<?php echo $r['stars'];?></span> --><span class="icon_4">更新时间：<?php echo date('Y-m-d',$r[inputtime]);?></span></dd>
       </dl>
       <?php $n++;}unset($n); ?>	
       <!--pages-->
@@ -38,11 +38,11 @@
 <!--right_bar-->
 <div class="col-auto" style="margin-top: 24px">
    <!--广告228x90-->
-   <div class="brd mg_b10"><script language="javascript" src="<?php echo APP_PATH;?>caches/poster_js/5.js"></script></div>
+   <!-- <div class="brd mg_b10"><script language="javascript" src="<?php echo APP_PATH;?>caches/poster_js/5.js"></script></div> -->
    <div class="box">
     <h5 class="title-2">下载排行</h5>
     <ul class="content digg">
-     <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=0ad40a45ad075d8f47798a231e25aec2&action=hits&catid=%24catid&num=10&order=views+DESC&cache=3600\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$tag_cache_name = md5(implode('&',array('catid'=>$catid,'order'=>'views DESC',)).'0ad40a45ad075d8f47798a231e25aec2');if(!$data = tpl_cache($tag_cache_name,3600)){$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'hits')) {$data = $content_tag->hits(array('catid'=>$catid,'order'=>'views DESC','limit'=>'10',));}if(!empty($data)){setcache($tag_cache_name, $data, 'tpl_data');}}?>
+     <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=11e982198282a77f17ebf8d7a1dede5e&action=lists&catid=%24catid&num=10&order=id+DESC&page=%24page\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$pagesize = 10;$page = intval($page) ? intval($page) : 1;if($page<=0){$page=1;}$offset = ($page - 1) * $pagesize;$content_total = $content_tag->count(array('catid'=>$catid,'order'=>'id DESC','limit'=>$offset.",".$pagesize,'action'=>'lists',));$pages = pages($content_total, $page, $pagesize, $urlrule);$data = $content_tag->lists(array('catid'=>$catid,'order'=>'id DESC','limit'=>$offset.",".$pagesize,'action'=>'lists',));}?>
      <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
      <li><a href="<?php echo $r['url'];?>" target="_blank"><?php echo $r['title'];?></a></li>
      <?php $n++;}unset($n); ?>
